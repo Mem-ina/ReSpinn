@@ -107,7 +107,7 @@ ReSpinn-catalog/
 
 ### Design System
 - **Primary Color**: Black (#000000)
-- **Secondary Color**: Orange (#f97316)
+- **Secondary Color**: Red
 - **Neutrals**: Grays and whites
 - **Typography**: Inter font family
 - **Spacing**: Consistent Tailwind spacing scale
