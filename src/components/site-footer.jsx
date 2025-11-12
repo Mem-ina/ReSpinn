@@ -61,7 +61,7 @@ export function SiteFooter() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <Phone className="h-4 w-4 mt-0.5 text-secondary" />
-                <span className="text-muted-foreground">+27 60 800 1900</span>
+                <span className="text-muted-foreground">+27 60 400 1900</span>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="h-4 w-4 mt-0.5 text-secondary" />
@@ -69,7 +69,7 @@ export function SiteFooter() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 text-secondary" />
-                <span className="text-muted-foreground">118 High Street Turffontein, Johannesburg South</span>
+                <span className="text-muted-foreground">256 Port Street, Johannesburg North</span>
               </li>
             </ul>
           </div>

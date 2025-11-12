@@ -7,6 +7,9 @@ import { Card, CardContent } from "../components/ui/card"
 import { Badge } from "../components/ui/badge"
 import { Shield, DollarSign, Clock, ArrowRight } from "lucide-react"
 
+// Import images if they're in src folder, or use relative paths for public folder
+// If images are in public folder, use these paths:
+
 export default function HomePage() {
   const features = [
     {
@@ -51,7 +54,7 @@ export default function HomePage() {
       compatibility: "Honda Civic 2015-2018",
       condition: "Excellent",
       price: "R11500",
-      image: "/car-engine-block.jpg",
+      image: "./car-engine-block.jpg", // CHANGED
     },
     {
       id: 2,
@@ -59,7 +62,7 @@ export default function HomePage() {
       compatibility: "Toyota Camry 2016-2020",
       condition: "Good",
       price: "R1300",
-      image: "/car-front-bumper.png",
+      image: "./car-front-bumper.png", // CHANGED
     },
     {
       id: 3,
@@ -67,7 +70,7 @@ export default function HomePage() {
       compatibility: "Ford F-150 2014-2019",
       condition: "Excellent",
       price: "R12000",
-      image: "/car-transmission.png",
+      image: "./car-transmission.png", // CHANGED
     },
     {
       id: 4,
@@ -75,7 +78,7 @@ export default function HomePage() {
       compatibility: "Nissan Altima 2017-2021",
       condition: "Like New",
       price: "R1200",
-      image: "/car-headlight.jpg",
+      image: "./car-headlight.jpg", // CHANGED
     },
     {
       id: 5,
@@ -83,7 +86,7 @@ export default function HomePage() {
       compatibility: "Chevrolet Silverado 2015-2020",
       condition: "Good",
       price: "R1450",
-      image: "/car-alternator.jpg",
+      image: "./car-alternator.jpg", // CHANGED
     },
     {
       id: 6,
@@ -91,7 +94,7 @@ export default function HomePage() {
       compatibility: "BMW 3 Series 2016-2019",
       condition: "Excellent",
       price: "R2500",
-      image: "/car-door-panel.jpg",
+      image: "./car-door-panel.jpg", // CHANGED
     },
   ]
 
@@ -102,7 +105,8 @@ export default function HomePage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative bg-primary text-primary-foreground">
-          <div className="absolute inset-0 bg-[url('/auto-parts-warehouse.jpg')] bg-cover bg-center opacity-20" />
+          {/* CHANGED: Background image path */}
+          <div className="absolute inset-0 bg-[url('./auto-parts-warehouse.jpg')] bg-cover bg-center opacity-20" />
           <div className="container relative mx-auto px-4 py-20 md:py-32">
             <div className="max-w-3xl">
               <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl text-balance mb-6">
@@ -163,9 +167,10 @@ export default function HomePage() {
         {/* How It Works Section */}
         <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
+            {/* CHANGED: Image path */}
             <div className="mb-12 rounded-lg overflow-hidden max-w-4xl mx-auto">
               <img
-                src="/mechanic-working.jpg"
+                src="./mechanic-working.jpg"
                 alt="Mechanic working on car parts"
                 className="w-full h-64 md:h-80 object-cover"
               />
@@ -220,7 +225,7 @@ export default function HomePage() {
                 <Card key={part.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                   <div className="aspect-[4/3] overflow-hidden bg-muted">
                     <img
-                      src={part.image || "/placeholder.svg"}
+                      src={part.image || "./placeholder.svg"}
                       alt={part.name}
                       className="h-full w-full object-cover transition-transform hover:scale-105"
                     />
